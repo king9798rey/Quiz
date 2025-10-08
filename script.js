@@ -1,70 +1,59 @@
 const questions = [
     {
         question:"which is largest animal in the world ?",
-        answers: [
+        answers:[
             { text: "Shark", correct: false},
             { text: "Blue Whale", correct: true},
             { text: "Elephant", correct: false},
             { text: "Lion", correct: false}
-            
         ]
     },
 
-     {
-        question:"which is largest river in the India ?",
+    {
+        question: "Which planet is known as the Red Planet?",
         answers: [
-            { text: "Ganga", correct: true},
-            { text: "Narmada", correct: false},
-            { text: "Koshi", correct: false},
-            { text: "Brahmputra", correct: false}
-            
+            { text: "Earth", correct: false },
+            { text: "Venus", correct: false },
+            { text: "Mars", correct: true },
+            { text: "Jupiter", correct: false }
+        ]
+
+    },
+
+    {
+        question: "Who was the first President of India?",
+        answers: [
+            { text: "Dr. Rajendra Prasad", correct: true },
+            { text: "Jawaharlal Nehru", correct: false },
+            { text: "Sardar Patel", correct: false },
+            { text: "Subhas Chandra Bose", correct: false }
         ]
     },
 
-     {
-        question:"which is largest number in the in option?",
+    {
+        question: "What is the national animal of India?",
         answers: [
-            { text: "64", correct: false},
-            { text: "79", correct: false},
-            { text: "89", correct: false},
-            { text: "59", correct: false}
-            
+            { text: "Elephant", correct: false },
+            { text: "Tiger", correct: true },
+            { text: "Lion", correct: false },
+            { text: "Peacock", correct: false }
         ]
     },
 
-     {
-        question:"which is largest animal in the india ?",
+    {
+        question: "Which is the largest ocean in the world?",
         answers: [
-            { text: "Lion", correct: false},
-            { text: "Giraffe", correct: false},
-            { text: "Elephant", correct: true},
-            { text: "Shark", correct: false}
-            
+            { text: "Indian Ocean", correct: false },
+            { text: "Pacific Ocean", correct: true },
+            { text: "Atlantic Ocean", correct: false },
+            { text: "Arctic Ocean", correct: false }
         ]
-    },
+  },
 
-     {
-        question:"which is largest symbol ?",
-        answers: [
-            { text: ">", correct: true},
-            { text: "<", correct: false},
-            { text: "=", correct: false},
-            { text: "+", correct: false}
-            
-        ]
-    },
 
-     {
-        question:"Who is the PM of India ?",
-        answers: [
-            { text: "Modi", correct: true},
-            { text: "Rahul", correct: false},
-            { text: "Adani", correct: false},
-            { text: "Ambani", correct: false}
-            
-        ]
-    },
+
 ];
+    
 
 const questionElement = document.getElementById("question");
 
@@ -79,10 +68,14 @@ let timer;
 let timeLeft = 60;
 
 
+
+
+
 function startQuize(){
     currentQuestionIndex = 0;
     score = 0;
     nextButton.innerHTML = "Next";
+    document.getElementById("timer").style.display = "block";
     showQuestion()
 }
 
@@ -135,6 +128,7 @@ function selectAnswer(e){
 
 function showScore(){
     resetstate();
+    document.getElementById("timer").style.display = "none";
     questionElement.innerHTML = `You scored ${score} out of ${questions.length} !`;
     nextButton.innerHTML = "Play Again";
     nextButton.style.display = "block";
@@ -185,6 +179,7 @@ function handleTimeUp() {
 
     nextButton.style.display = "block";
 }
+
 
 
 
