@@ -61,6 +61,17 @@ const answerButtons = document.getElementById("ans-buttons");
 
 const nextButton =document.getElementById("next-btn");
 
+const startButton = document.getElementById("start-btn");
+const quizContainer = document.getElementById("quiz");
+const startScreen = document.getElementById("start-screen");
+
+startButton.addEventListener("click", () => {
+    startScreen.style.display = "none";
+    quizContainer.style.display = "block";
+    startQuize();
+});
+
+
 let currentQuestionIndex = 0;
 let score = 0;
 

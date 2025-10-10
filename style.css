@@ -7,7 +7,10 @@
 }
 
 body{
-    background-color: #05c08e40;
+    background-image: url("fun.png.png");
+    background-repeat: repeat;
+    background-color: #f8f9fa;
+    font-family: Arial, Helvetica, sans-serif;
 
 }
 
@@ -91,4 +94,50 @@ body{
 .incorrect{
     background-color: #ff9393;
 
+}
+
+.start-screen {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.start-screen h2 {
+    font-size: 24px;
+    color: #001e4d;
+    margin-bottom: 10px;
+}
+
+.start-screen p {
+    color: #444;
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+.start-btn {
+    background-color: #001e4d;
+    color: #fff;
+    font-size: 18px;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.start-btn:hover {
+    background-color: #00307a;
+    transform: scale(1.05);
+}
+
+
+.app {
+    background: rgba(255, 255, 255, 0.6); /* translucent white */
+    backdrop-filter: blur(10px);           /* adds blur behind the card */
+    -webkit-backdrop-filter: blur(10px);   /* for Safari support */
+    border-radius: 15px;
+    padding: 30px;
+    width: 90%;
+    max-width: 660px;
+    margin: 100px auto;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
